@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<style>
+    body {
+        background-image: url(static/result.png);
+        background-size: cover;
+    }
+
+    .img {
+        display: flex;
+        justify-content: center;  /* Center horizontally */
+        align-items: center;     /* Center vertically */
+        height: 100%;            /* Occupies the whole height of the parent */
+        width: 100%;             /* Occupies the whole width of the parent */
+    }
+
+    .img img {
+        height: 400px;
+        width: 650px;
+        border: 1px solid green;
+    }
+
+    header {
+        background-color: green;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        border: 3px solid gray;
+    }
+
+    marquee h1 {
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .container {
+        background-color: yellow;
+        border: 1px solid green;
+        text-align: center;
+    }
+</style>
+<body>
+<header>
+    <marquee>
+        <h1><b>RICE LEAF DISEASE DETECTION SYSTEM</b></h1>
+    </marquee>
+</header>
+
+<div class="container col-md-6">
+    {% if res %}
+    <h2>Predicted disease is {{ res }}</h2>
+    {% endif %}
+</div>
+
+<div class="img">
+    <img src="static/h.jpg" alt="Rice Leaf Image">
+</div>
+
+</body>
+</html>
